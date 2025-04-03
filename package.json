@@ -13,11 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
-    "react-scripts": "^5.0.1",
-=======
-    "react-scripts": "5.0.1",
->>>>>>> ecfdb20a73a852c4209c17679c0b57fe7d59d7a0
     "uuid": "^11.1.0",
     "web-vitals": "^2.1.4"
   },
