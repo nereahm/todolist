@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
@@ -27,3 +28,34 @@ export const Todo = ({ task, toggleComplete, deleteTodo, editTodo }) => {
 };
 
 export default Todo;
+=======
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons"; 
+
+export const Todo = ({ task, toggleComplete, deleteTodo, editTodo }) => {
+  return (
+    <div className="Todo">
+      <p
+        onClick={() => toggleComplete(task.id)}
+        className={`${task.completed ? "completed" : ""}`}
+      >
+        {task.task}
+      </p>
+      <div>
+      <FontAwesomeIcon
+          icon={faCheck} 
+          onClick={() => toggleComplete(task.id)} 
+          className={`check-btn ${task.completed ? "checked" : ""}`} 
+        />
+        <FontAwesomeIcon icon={faPenToSquare} onClick={() => editTodo(task.id)}/>
+        <FontAwesomeIcon icon={faTrash} onClick={() => deleteTodo(task.id)} />
+      </div>
+    </div>
+  );
+};
+
+export default Todo;
+>>>>>>> ecfdb20a73a852c4209c17679c0b57fe7d59d7a0
